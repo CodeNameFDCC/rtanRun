@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- 현재 매타 UTF-8 언어코드-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--이름 시점 콘텐츠의 크기는 기기의 가로크기 , 초기화 크기는 1의 크기를 가진다.-->
+    <title>rtan is sparta! hu!</title><!-- 명칭 르탄이는 스파르타 후 -->
+    <link rel="stylesheet" href="styles.css"><!--스타일은 Styles.css 를 적용한다.-->
+    <div id="title">지옥에서 온 스파르타 인!</div><!--또 쓸모없는 타이틀-->
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="canvas"></canvas><!--여기 켄버스에 게임이 들어갈 것이다.-->
+        <div id="score">현재점수: 0</div><!--여기는 점수가 들어 갈 것이다.-->
+    </div>
+    <div id="sound_controller">
+        <button onclick="Mute()">Mute:<span id="mute_state">false</span></button><!--싸운도 꼰또롤로-->
+        <input type="range" id="volume-control" min="0" max="5" value="5"><!--소리 0부터 5까지 최대치로 루시우도 울고갈 사운드 크기-->
+    </div>
+
+    <!-- JavaScript files -->
+     <!--여기는 자바 나눈거 다시 불러오는데 순서가 중요하다.-->
+    <script src="images.js"></script>
+    <script src="sounds.js"></script>
+    <script src="obstacles.js"></script>
+    <script src="events.js"></script>
+    <script src="player.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
