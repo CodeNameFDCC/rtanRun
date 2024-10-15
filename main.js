@@ -63,7 +63,8 @@ Promise.all([bgImageLoaded, startImageLoaded]).then(drawStartScreen);
 /** end of 3-1 게임 시작 화면을 그리는 함수 */
 
 
-function animate() {
+function animate() 
+{
     
     InitSound();
     
@@ -84,7 +85,7 @@ function animate() {
     backgroundImg(bgX + canvas.width);
     bgX -= BG_MOVING_SPEED;
     if (bgX < -canvas.width) bgX = 0;
-    const randbox = [30]
+    const randbox = [30,60,90]
     const selected = randbox[Math.floor(Math.random() * randbox.length)];
     if (timer % selected === 0) {
         generateObstacles();
@@ -92,13 +93,7 @@ function animate() {
     updateObstacles();
 
     rtan.draw();
-    if (jump) {
-        rtan.y -= jumpSpeed;
-        if (rtan.y < 0) rtan.y = 0;
-    } else if (rtan.y < 450) {
-        rtan.y += jumpSpeed;
-        if (rtan.y > 450) rtan.y = 450;
-    }
+
     
 }
 

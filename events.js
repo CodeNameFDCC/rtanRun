@@ -2,22 +2,26 @@
 
 
 //키가 내려갔다 무엇이? 
-document.addEventListener("keydown", function (e) {
-    if (e.code === "Space") {//그것은 바로 공간 키
+document.addEventListener("click", function (e) {
+   // if (e.code === "click") {//그것은 바로 공간 키
         jumpSound.currentTime = 0; //사운드 실행 길이를 즉시 초기화 함으로 소리 끊김 현상 즉결처형
         jumpSound.play(); //드랍더 비트!
-    }
-    if (e.code === "Space" && !jump) {
+    //}
+    //if (e.code === "click" && !jump) {
+    if(!jump)
+    {
         jump = true; //나 지금 점프 중이야
 
     }
+
+ //   }
 });
 
 //키가 올라갔다 무엇이? 
-document.addEventListener("keyup", function (e) {
-    if (e.code === "Space") {//그것은 바로 공간 키
+document.addEventListener("click", function (e) {
+    //if (e.code === "click") {//그것은 바로 공간 키
         jump = false;
-    }
+    //}
 });
 
 canvas.addEventListener("click", function (e) {//누가 마우스 클릭 소리를 내었는가?

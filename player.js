@@ -26,3 +26,9 @@ function collision(rtan, obstacle) {
         rtan.y + rtan.height < obstacle.y
     );
 }
+canvas.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    rtan.x = event.clientX - rect.left -30;
+    rtan.y = event.clientY - rect.top -30;
+    if(rtan.y <= 20) rtan.y = 20;
+});
